@@ -7,11 +7,11 @@ import (
 
 // Employee type represents an employee with their details
 type Employee struct {
-	Name         string    `name:json`          // Employee name
-	Role         string    `role:json`          // Employee role
-	HourlyWage   float64   `hourly_wage:json`   // Hourly wage of the employee
-	Register     int       `register:json`      // Unique employee register number
-	StartingDate time.Time `starting_date:json` // Date the employee started working
+	Name         string    `json:"name"`          // Employee name
+	Role         string    `json:"role"`          // Employee role
+	HourlyWage   float64   `json:"hourly_wage"`   // Hourly wage of the employee
+	Register     int       `json:"register"`      // Unique employee register number
+	StartingDate time.Time `json:"starting_date"` // Date the employee started working
 	Next         *Employee // Pointer to the next employee in the linked list
 }
 
